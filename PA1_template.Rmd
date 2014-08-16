@@ -26,11 +26,13 @@ find which 5 min interval contains max # of steps
 ```{r}
 info <- data.frame(interval, stepsInt)
 maximum <- info[info[, 2] == max(stepsInt), ][1]
+maximum
 ```
 
 calculate total # of missing vals in dataset
 ```{r}
 numMissing <- sum(as.numeric(is.na(data$steps)))
+numMissing
 ```
 
 fill in missing vals of dataset with mean for that 5-min interval
