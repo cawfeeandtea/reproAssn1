@@ -4,14 +4,6 @@ loading data
 data <- read.csv(unzip("repdata-data-activity.zip"))
 ```
 
-```
-## Warning: error 1 in extracting from zip file
-```
-
-```
-## Error: invalid 'description' argument
-```
-
 create histogram of total number of steps taken each day
 
 ```r
