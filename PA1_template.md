@@ -4,6 +4,14 @@ loading data
 data <- read.csv(unzip("repdata-data-activity.zip"))
 ```
 
+```
+## Warning: error 1 in extracting from zip file
+```
+
+```
+## Error: invalid 'description' argument
+```
+
 create histogram of total number of steps taken each day
 
 ```r
@@ -46,12 +54,23 @@ find which 5 min interval contains max # of steps
 ```r
 info <- data.frame(interval, stepsInt)
 maximum <- info[info[, 2] == max(stepsInt), ][1]
+maximum
+```
+
+```
+##     interval
+## 835      835
 ```
 
 calculate total # of missing vals in dataset
 
 ```r
 numMissing <- sum(as.numeric(is.na(data$steps)))
+numMissing
+```
+
+```
+## [1] 2304
 ```
 
 fill in missing vals of dataset with mean for that 5-min interval
